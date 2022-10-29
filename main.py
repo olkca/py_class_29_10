@@ -1,12 +1,17 @@
 def pryamokutnyk(a,b):
-    for i in range(0, a):
-        for j in range(0,b):
-            print("*", end = " ")
+    try:
+        for i in range(0, a):
+            for j in range(0,b):
+                print("*", end = " ")
+            print()
         print()
-    print()
+    except Exception as e:
+        print(f"Error {e}")
 
 
 def main():
-    pryamokutnyk(int(input("Height -->")),int(input("Width -->")))
-
+    try:
+        pryamokutnyk(int(input("Height -->")),int(input("Width -->")))
+    except Exception as e:
+        print(f"Error {e}")
 main()
